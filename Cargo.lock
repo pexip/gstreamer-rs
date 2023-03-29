@@ -169,7 +169,7 @@ checksum = "514de17de45fdb8dc022b1a7975556c53c86f9f0aa5f534b98977b171857c2c9"
 [[package]]
 name = "cairo-rs"
 version = "0.20.0"
-source = "git+https://github.com/gtk-rs/gtk-rs-core?branch=0.20#32b170cf4a931db32b3c604aa23c5213196e152c"
+source = "git+https://github.com/pexip/gtk-rs-core?branch=0.20.0#27472676b1ab849cc5bd9e237d3a1f52da4e99a9"
 dependencies = [
  "bitflags 2.6.0",
  "cairo-sys-rs",
@@ -181,7 +181,7 @@ dependencies = [
 [[package]]
 name = "cairo-sys-rs"
 version = "0.20.0"
-source = "git+https://github.com/gtk-rs/gtk-rs-core?branch=0.20#32b170cf4a931db32b3c604aa23c5213196e152c"
+source = "git+https://github.com/pexip/gtk-rs-core?branch=0.20.0#27472676b1ab849cc5bd9e237d3a1f52da4e99a9"
 dependencies = [
  "glib-sys",
  "libc",
@@ -678,7 +678,7 @@ dependencies = [
 [[package]]
 name = "gio"
 version = "0.20.0"
-source = "git+https://github.com/gtk-rs/gtk-rs-core?branch=0.20#32b170cf4a931db32b3c604aa23c5213196e152c"
+source = "git+https://github.com/pexip/gtk-rs-core?branch=0.20.0#27472676b1ab849cc5bd9e237d3a1f52da4e99a9"
 dependencies = [
  "futures-channel",
  "futures-core",
@@ -695,7 +695,7 @@ dependencies = [
 [[package]]
 name = "gio-sys"
 version = "0.20.0"
-source = "git+https://github.com/gtk-rs/gtk-rs-core?branch=0.20#32b170cf4a931db32b3c604aa23c5213196e152c"
+source = "git+https://github.com/pexip/gtk-rs-core?branch=0.20.0#27472676b1ab849cc5bd9e237d3a1f52da4e99a9"
 dependencies = [
  "glib-sys",
  "gobject-sys",
@@ -724,7 +724,7 @@ dependencies = [
 [[package]]
 name = "glib"
 version = "0.20.0"
-source = "git+https://github.com/gtk-rs/gtk-rs-core?branch=0.20#32b170cf4a931db32b3c604aa23c5213196e152c"
+source = "git+https://github.com/pexip/gtk-rs-core?branch=0.20.0#27472676b1ab849cc5bd9e237d3a1f52da4e99a9"
 dependencies = [
  "bitflags 2.6.0",
  "futures-channel",
@@ -739,13 +739,14 @@ dependencies = [
  "libc",
  "memchr",
  "smallvec",
+ "system-deps",
  "thiserror",
 ]
 
 [[package]]
 name = "glib-macros"
 version = "0.20.0"
-source = "git+https://github.com/gtk-rs/gtk-rs-core?branch=0.20#32b170cf4a931db32b3c604aa23c5213196e152c"
+source = "git+https://github.com/pexip/gtk-rs-core?branch=0.20.0#27472676b1ab849cc5bd9e237d3a1f52da4e99a9"
 dependencies = [
  "heck",
  "proc-macro-crate",
@@ -757,7 +758,7 @@ dependencies = [
 [[package]]
 name = "glib-sys"
 version = "0.20.0"
-source = "git+https://github.com/gtk-rs/gtk-rs-core?branch=0.20#32b170cf4a931db32b3c604aa23c5213196e152c"
+source = "git+https://github.com/pexip/gtk-rs-core?branch=0.20.0#27472676b1ab849cc5bd9e237d3a1f52da4e99a9"
 dependencies = [
  "libc",
  "system-deps",
@@ -831,7 +832,7 @@ dependencies = [
 [[package]]
 name = "gobject-sys"
 version = "0.20.0"
-source = "git+https://github.com/gtk-rs/gtk-rs-core?branch=0.20#32b170cf4a931db32b3c604aa23c5213196e152c"
+source = "git+https://github.com/pexip/gtk-rs-core?branch=0.20.0#27472676b1ab849cc5bd9e237d3a1f52da4e99a9"
 dependencies = [
  "glib-sys",
  "libc",
@@ -1909,7 +1910,7 @@ dependencies = [
 [[package]]
 name = "pango"
 version = "0.20.0"
-source = "git+https://github.com/gtk-rs/gtk-rs-core?branch=0.20#32b170cf4a931db32b3c604aa23c5213196e152c"
+source = "git+https://github.com/pexip/gtk-rs-core?branch=0.20.0#27472676b1ab849cc5bd9e237d3a1f52da4e99a9"
 dependencies = [
  "gio",
  "glib",
@@ -1920,7 +1921,7 @@ dependencies = [
 [[package]]
 name = "pango-sys"
 version = "0.20.0"
-source = "git+https://github.com/gtk-rs/gtk-rs-core?branch=0.20#32b170cf4a931db32b3c604aa23c5213196e152c"
+source = "git+https://github.com/pexip/gtk-rs-core?branch=0.20.0#27472676b1ab849cc5bd9e237d3a1f52da4e99a9"
 dependencies = [
  "glib-sys",
  "gobject-sys",
@@ -1931,7 +1932,7 @@ dependencies = [
 [[package]]
 name = "pangocairo"
 version = "0.20.0"
-source = "git+https://github.com/gtk-rs/gtk-rs-core?branch=0.20#32b170cf4a931db32b3c604aa23c5213196e152c"
+source = "git+https://github.com/pexip/gtk-rs-core?branch=0.20.0#27472676b1ab849cc5bd9e237d3a1f52da4e99a9"
 dependencies = [
  "cairo-rs",
  "glib",
@@ -1943,7 +1944,7 @@ dependencies = [
 [[package]]
 name = "pangocairo-sys"
 version = "0.20.0"
-source = "git+https://github.com/gtk-rs/gtk-rs-core?branch=0.20#32b170cf4a931db32b3c604aa23c5213196e152c"
+source = "git+https://github.com/pexip/gtk-rs-core?branch=0.20.0#27472676b1ab849cc5bd9e237d3a1f52da4e99a9"
 dependencies = [
  "cairo-sys-rs",
  "glib-sys",

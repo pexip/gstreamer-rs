@@ -115,14 +115,14 @@ edition = "2021"
 rust-version = "1.71.1"
 
 [workspace.dependencies]
-gio = { git = "https://github.com/gtk-rs/gtk-rs-core", branch = "0.20", version = "0.20" }
-gio-sys = { git = "https://github.com/gtk-rs/gtk-rs-core", branch = "0.20", version = "0.20" }
-glib = { git = "https://github.com/gtk-rs/gtk-rs-core", branch = "0.20", version = "0.20" }
-glib-sys = { git = "https://github.com/gtk-rs/gtk-rs-core", branch = "0.20", version = "0.20" }
-gobject-sys = { git = "https://github.com/gtk-rs/gtk-rs-core", branch = "0.20", version = "0.20" }
-cairo-rs = { git = "https://github.com/gtk-rs/gtk-rs-core", branch = "0.20", version = "0.20" }
-pango = { git = "https://github.com/gtk-rs/gtk-rs-core", branch = "0.20", version = "0.20" }
-pangocairo = { git = "https://github.com/gtk-rs/gtk-rs-core", branch = "0.20", version = "0.20" }
+gio = { git = "https://github.com/pexip/gtk-rs-core", branch = "0.20.0", version = "0.20.0" }
+gio-sys = { git = "https://github.com/pexip/gtk-rs-core", branch = "0.20.0", version = "0.20.0" }
+glib = { git = "https://github.com/pexip/gtk-rs-core", branch = "0.20.0", version = "0.20.0" }
+glib-sys = { git = "https://github.com/pexip/gtk-rs-core", branch = "0.20.0", version = "0.20.0" }
+gobject-sys = { git = "https://github.com/pexip/gtk-rs-core", branch = "0.20.0", version = "0.20.0" }
+cairo-rs = { git = "https://github.com/pexip/gtk-rs-core", branch = "0.20.0", version = "0.20.0" }
+pango = { git = "https://github.com/pexip/gtk-rs-core", branch = "0.20.0", version = "0.20.0" }
+pangocairo = { git = "https://github.com/pexip/gtk-rs-core", branch = "0.20.0", version = "0.20.0" }
 gstreamer-allocators-sys = { path = "gstreamer-allocators/sys", version = "0.23" }
 gstreamer-analytics-sys = { path = "gstreamer-analytics/sys", version = "0.23" }
 gstreamer-app-sys = {  path = "gstreamer-app/sys", version = "0.23" }
