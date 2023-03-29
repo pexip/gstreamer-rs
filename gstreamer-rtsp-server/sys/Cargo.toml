@@ -6,19 +6,19 @@ libc = "0.2"
 
 [dependencies.gio]
 package = "gio-sys"
-git = "https://github.com/gtk-rs/gtk-rs-core"
+git = "https://github.com/pexip/gtk-rs-core"
 branch = "0.16"
 version = "0.16"
 
 [dependencies.glib]
 package = "glib-sys"
-git = "https://github.com/gtk-rs/gtk-rs-core"
+git = "https://github.com/pexip/gtk-rs-core"
 branch = "0.16"
 version = "0.16"
 
 [dependencies.gobject]
 package = "gobject-sys"
-git = "https://github.com/gtk-rs/gtk-rs-core"
+git = "https://github.com/pexip/gtk-rs-core"
 branch = "0.16"
 version = "0.16"
 

@@ -5,13 +5,13 @@ system-deps = "6"
 libc = "0.2"
 
 [dependencies.glib]
-git = "https://github.com/gtk-rs/gtk-rs-core"
+git = "https://github.com/pexip/gtk-rs-core"
 branch = "0.16"
 version = "0.16"
 package = "glib-sys"
 
 [dependencies.gobject]
-git = "https://github.com/gtk-rs/gtk-rs-core"
+git = "https://github.com/pexip/gtk-rs-core"
 branch = "0.16"
 version = "0.16"
 package = "gobject-sys"
