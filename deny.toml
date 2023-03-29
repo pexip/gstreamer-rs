@@ -33,5 +33,5 @@ version = "0.21"
 unknown-registry = "deny"
 unknown-git = "deny"
 allow-git = [
-  "https://github.com/gtk-rs/gtk-rs-core",
+  "https://github.com/pexip/gtk-rs-core",
 ]
