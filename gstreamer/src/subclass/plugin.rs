@@ -21,6 +21,7 @@ macro_rules! plugin_define(
     ($name:ident, $description:expr, $plugin_init:ident,
      $version:expr, $license:expr, $source:expr,
      $package:expr, $origin:expr $(, $release_datetime:expr)?) => {
+        #[allow(missing_docs)]
         pub mod plugin_desc {
             #[repr(transparent)]
             pub struct GstPluginDesc($crate::ffi::GstPluginDesc);
