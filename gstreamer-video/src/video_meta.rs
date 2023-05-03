@@ -357,6 +357,11 @@ impl VideoRegionOfInterestMeta {
         unsafe { glib::Quark::from_glib(self.0.roi_type).as_str() }
     }
 
+    #[doc(alias = "get_roi_type")]
+    pub fn roi_type_quark<'a>(&self) -> &'a glib::Quark {
+        unsafe { glib::Quark::from_glib(self.0.roi_type) }
+    }
+
     #[doc(alias = "get_params")]
     pub fn params(&self) -> ParamsIter {
         ParamsIter {
