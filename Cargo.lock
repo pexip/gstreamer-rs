@@ -1745,7 +1745,7 @@ dependencies = [
 
 [[package]]
 name = "gstreamer-video"
-version = "0.19.8"
+version = "0.19.9"
 dependencies = [
  "bitflags",
  "cfg-if",

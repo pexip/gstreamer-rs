@@ -132,9 +132,17 @@ impl VideoMeta {
         self.0.width
     }
 
+    pub fn set_width(&mut self, value: u32) {
+        self.0.width = value;
+    }
+
     #[doc(alias = "get_height")]
     pub fn height(&self) -> u32 {
         self.0.height
+    }
+
+    pub fn set_height(&mut self, value: u32) {
+        self.0.height = value;
     }
 
     #[doc(alias = "get_n_planes")]
@@ -145,6 +153,11 @@ impl VideoMeta {
     #[doc(alias = "get_offset")]
     pub fn offset(&self) -> &[usize] {
         &self.0.offset[0..(self.0.n_planes as usize)]
+    }
+
+    #[doc(alias = "set_offset")]
+    pub fn set_offset_index(&mut self, index: usize, value: usize) {
+        self.0.offset[index] = value;
     }
 
     #[doc(alias = "get_stride")]
