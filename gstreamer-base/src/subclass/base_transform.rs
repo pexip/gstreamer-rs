@@ -1148,18 +1148,10 @@ unsafe extern "C" fn base_transform_prepare_output_buffer<T: BaseTransformImpl>(
     gst::panic_to_error!(imp, gst::FlowReturn::Error, {
         match imp.prepare_output_buffer(buffer) {
             Ok(PrepareOutputBufferSuccess::InputBuffer) => {
-                assert!(
-                    is_passthrough || is_in_place,
-                    "Returning InputBuffer only allowed for passthrough or in-place mode"
-                );
                 *outbuf = inbuf;
                 gst::FlowReturn::Ok
             }
             Ok(PrepareOutputBufferSuccess::Buffer(buf)) => {
-                assert!(
-                    !is_passthrough,
-                    "Returning Buffer not allowed for passthrough mode"
-                );
                 *outbuf = buf.into_glib_ptr();
                 gst::FlowReturn::Ok
             }
