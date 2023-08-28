@@ -6,7 +6,3 @@
 	path = gir-files
 	url = https://github.com/gtk-rs/gir-files
 	update = none
-[submodule "gst-gir-files"]
-	path = gst-gir-files
-	url = https://gitlab.freedesktop.org/gstreamer/gir-files-rs.git
-	update = none
