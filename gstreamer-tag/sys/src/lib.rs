@@ -283,7 +283,6 @@ impl ::std::fmt::Debug for GstTagXmpWriter {
     }
 }
 
-#[link(name = "gsttag-1.0")]
 extern "C" {
 
     //=========================================================================

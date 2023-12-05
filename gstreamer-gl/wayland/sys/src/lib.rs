@@ -65,7 +65,6 @@ impl ::std::fmt::Debug for GstGLDisplayWayland {
     }
 }
 
-#[link(name = "gstgl-1.0")]
 extern "C" {
 
     //=========================================================================

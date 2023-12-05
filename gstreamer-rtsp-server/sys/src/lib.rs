@@ -1302,7 +1302,6 @@ impl ::std::fmt::Debug for GstRTSPThreadPool {
     }
 }
 
-#[link(name = "gstrtspserver-1.0")]
 extern "C" {
 
     //=========================================================================

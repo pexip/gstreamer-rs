@@ -60,7 +60,6 @@ impl ::std::fmt::Debug for GstGLDisplayEGL {
     }
 }
 
-#[link(name = "gstgl-1.0")]
 extern "C" {
 
     //=========================================================================

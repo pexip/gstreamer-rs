@@ -1420,7 +1420,6 @@ impl ::std::fmt::Debug for GstStreamVolume {
     }
 }
 
-#[link(name = "gstaudio-1.0")]
 extern "C" {
 
     //=========================================================================

@@ -875,7 +875,7 @@ dependencies = [
  "futures-core",
  "futures-io",
  "futures-util",
- "gio-sys 0.16.8",
+ "gio-sys 0.16.8 (git+https://github.com/pexip/gtk-rs-core?branch=0.16)",
  "glib 0.16.8",
  "libc",
  "once_cell",
@@ -891,6 +891,17 @@ source = "git+https://github.com/gtk-rs/gtk-rs-core?branch=0.16#d23290301d4d8534
 dependencies = [
  "glib-sys 0.16.7",
  "gobject-sys 0.16.7",
+ "libc",
+ "system-deps",
+ "winapi",
+]
+
+[[package]]
+name = "gio-sys"
+version = "0.16.8"
+dependencies = [
+ "glib-sys 0.16.8",
+ "gobject-sys 0.16.8",
  "libc",
  "system-deps",
  "winapi",
@@ -949,7 +960,6 @@ dependencies = [
 [[package]]
 name = "glib"
 version = "0.16.8"
-source = "git+https://github.com/pexip/gtk-rs-core?branch=0.16#e923ef8cd81204ba7e2a5793c7a5c8bf285a42b2"
 dependencies = [
  "bitflags",
  "futures-channel",
@@ -985,7 +995,6 @@ dependencies = [
 [[package]]
 name = "glib-macros"
 version = "0.16.8"
-source = "git+https://github.com/pexip/gtk-rs-core?branch=0.16#e923ef8cd81204ba7e2a5793c7a5c8bf285a42b2"
 dependencies = [
  "anyhow",
  "heck",
@@ -1008,7 +1017,6 @@ dependencies = [
 [[package]]
 name = "glib-sys"
 version = "0.16.8"
-source = "git+https://github.com/pexip/gtk-rs-core?branch=0.16#e923ef8cd81204ba7e2a5793c7a5c8bf285a42b2"
 dependencies = [
  "libc",
  "system-deps",
@@ -1092,7 +1100,6 @@ dependencies = [
 [[package]]
 name = "gobject-sys"
 version = "0.16.8"
-source = "git+https://github.com/pexip/gtk-rs-core?branch=0.16#e923ef8cd81204ba7e2a5793c7a5c8bf285a42b2"
 dependencies = [
  "glib-sys 0.16.8",
  "libc",
@@ -1314,7 +1321,7 @@ dependencies = [
 name = "gstreamer-editing-services-sys"
 version = "0.19.8"
 dependencies = [
- "gio-sys 0.16.8",
+ "gio-sys 0.16.8 (git+https://github.com/pexip/gtk-rs-core?branch=0.16)",
  "glib-sys 0.16.8",
  "gobject-sys 0.16.8",
  "gstreamer-pbutils-sys",
@@ -1467,7 +1474,7 @@ dependencies = [
 name = "gstreamer-net-sys"
 version = "0.19.8"
 dependencies = [
- "gio-sys 0.16.8",
+ "gio-sys 0.16.8 (git+https://github.com/pexip/gtk-rs-core?branch=0.16)",
  "glib-sys 0.16.8",
  "gstreamer-sys",
  "libc",
@@ -1630,7 +1637,7 @@ dependencies = [
 name = "gstreamer-rtsp-server-sys"
 version = "0.19.8"
 dependencies = [
- "gio-sys 0.16.8",
+ "gio-sys 0.16.8 (git+https://github.com/pexip/gtk-rs-core?branch=0.16)",
  "glib-sys 0.16.8",
  "gobject-sys 0.16.8",
  "gstreamer-net-sys",
@@ -1647,7 +1654,7 @@ dependencies = [
 name = "gstreamer-rtsp-sys"
 version = "0.19.8"
 dependencies = [
- "gio-sys 0.16.8",
+ "gio-sys 0.16.8 (git+https://github.com/pexip/gtk-rs-core?branch=0.16)",
  "glib-sys 0.16.8",
  "gobject-sys 0.16.8",
  "gstreamer-sdp-sys",
@@ -1733,7 +1740,7 @@ dependencies = [
 name = "gstreamer-validate-sys"
 version = "0.19.8"
 dependencies = [
- "gio-sys 0.16.8",
+ "gio-sys 0.16.8 (git+https://github.com/pexip/gtk-rs-core?branch=0.16)",
  "glib-sys 0.16.8",
  "gobject-sys 0.16.8",
  "gstreamer-sys",

@@ -948,7 +948,6 @@ impl ::std::fmt::Debug for GstValidateReporter {
     }
 }
 
-#[link(name = "gstvalidate-1.0")]
 extern "C" {
 
     //=========================================================================

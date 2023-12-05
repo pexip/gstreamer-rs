@@ -548,7 +548,6 @@ impl ::std::fmt::Debug for GstWebRTCSCTPTransport {
     }
 }
 
-#[link(name = "gstwebrtc-1.0")]
 extern "C" {
 
     //=========================================================================

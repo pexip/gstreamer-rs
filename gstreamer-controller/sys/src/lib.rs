@@ -411,7 +411,6 @@ impl ::std::fmt::Debug for GstTriggerControlSource {
     }
 }
 
-#[link(name = "gstcontroller-1.0")]
 extern "C" {
 
     //=========================================================================

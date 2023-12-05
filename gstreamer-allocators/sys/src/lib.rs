@@ -123,7 +123,6 @@ impl ::std::fmt::Debug for GstPhysMemoryAllocator {
     }
 }
 
-#[link(name = "gstallocators-1.0")]
 extern "C" {
 
     //=========================================================================
