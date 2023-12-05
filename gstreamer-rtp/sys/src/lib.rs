@@ -593,7 +593,7 @@ impl ::std::fmt::Debug for GstRTPHeaderExtension {
     }
 }
 
-#[link(name = "gstrtp-1.0")]
+
 extern "C" {
 
     //=========================================================================

@@ -3962,7 +3962,7 @@ impl ::std::fmt::Debug for GstURIHandler {
     }
 }
 
-#[link(name = "gstreamer-1.0")]
+
 extern "C" {
 
     //=========================================================================

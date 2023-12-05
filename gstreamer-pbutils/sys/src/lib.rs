@@ -400,7 +400,7 @@ impl ::std::fmt::Debug for GstEncodingVideoProfile {
     }
 }
 
-#[link(name = "gstpbutils-1.0")]
+
 extern "C" {
 
     //=========================================================================

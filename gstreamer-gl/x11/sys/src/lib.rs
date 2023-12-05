@@ -57,7 +57,7 @@ impl ::std::fmt::Debug for GstGLDisplayX11 {
     }
 }
 
-#[link(name = "gstgl-1.0")]
+
 extern "C" {
 
     //=========================================================================

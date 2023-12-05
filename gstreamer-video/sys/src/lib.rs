@@ -2460,7 +2460,7 @@ impl ::std::fmt::Debug for GstVideoOverlay {
     }
 }
 
-#[link(name = "gstvideo-1.0")]
+
 extern "C" {
 
     //=========================================================================

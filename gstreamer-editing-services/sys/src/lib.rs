@@ -2786,7 +2786,7 @@ impl ::std::fmt::Debug for GESMetaContainer {
     }
 }
 
-#[link(name = "ges-1.0")]
+
 extern "C" {
 
     //=========================================================================

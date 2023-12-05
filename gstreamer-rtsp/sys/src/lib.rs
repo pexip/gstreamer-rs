@@ -698,7 +698,7 @@ impl ::std::fmt::Debug for GstRTSPExtension {
     }
 }
 
-#[link(name = "gstrtsp-1.0")]
+
 extern "C" {
 
     //=========================================================================

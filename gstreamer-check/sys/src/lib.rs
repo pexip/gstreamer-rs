@@ -113,7 +113,7 @@ impl ::std::fmt::Debug for GstTestClock {
     }
 }
 
-#[link(name = "gstcheck-1.0")]
+
 extern "C" {
 
     //=========================================================================

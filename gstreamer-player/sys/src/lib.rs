@@ -300,7 +300,7 @@ impl ::std::fmt::Debug for GstPlayerVideoRenderer {
     }
 }
 
-#[link(name = "gstplayer-1.0")]
+
 extern "C" {
 
     //=========================================================================

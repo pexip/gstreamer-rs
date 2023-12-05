@@ -1982,7 +1982,7 @@ impl ::std::fmt::Debug for GstMpegtsTerrestrialDeliverySystemDescriptor {
     }
 }
 
-#[link(name = "gstmpegts-1.0")]
+
 extern "C" {
 
     //=========================================================================

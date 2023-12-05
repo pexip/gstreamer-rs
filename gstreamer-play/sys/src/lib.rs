@@ -275,7 +275,7 @@ impl ::std::fmt::Debug for GstPlayVideoRenderer {
     }
 }
 
-#[link(name = "gstplay-1.0")]
+
 extern "C" {
 
     //=========================================================================
