@@ -899,6 +899,7 @@ dependencies = [
  "serde_json",
  "smallvec",
  "thiserror 2.0.8",
+ "system-deps",
 ]
 
 [[package]]
