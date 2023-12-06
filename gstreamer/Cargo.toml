@@ -8,10 +8,11 @@ keywords = ["gstreamer", "multimedia", "audio", "video", "gnome"]
 documentation = "https://gstreamer.pages.freedesktop.org/gstreamer-rs/stable/latest/docs/gstreamer/"
 version.workspace = true
 categories.workspace = true
-repository.workspace = true 
-homepage.workspace = true 
-edition.workspace = true 
-rust-version.workspace = true 
+repository.workspace = true
+homepage.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+build = "build.rs"
 
 [dependencies]
 cfg-if = "1.0"
@@ -41,6 +42,9 @@ serde_json = "1.0"
 futures-executor = "0.3.1"
 gir-format-check = "0.1"
 
+[build-dependencies]
+system-deps = "7"
+
 [features]
 default = []
 v1_16 = ["gstreamer-sys/v1_16"]
@@ -56,3 +60,31 @@ log = ["dep:log"]
 all-features = true
 rustc-args = ["--cfg", "docsrs"]
 rustdoc-args = ["--cfg", "docsrs", "--generate-link-to-definition"]
+
+[package.metadata.system-deps.'cfg(target_os = "macos")'.gstreamer_1_0]
+name = "gstreamer-1.0"
+version = "1.14"
+
+[package.metadata.system-deps.'cfg(target_os = "macos")'.gstreamer_1_0.v1_16]
+version = "1.16"
+
+[package.metadata.system-deps.'cfg(target_os = "macos")'.gstreamer_1_0.v1_18]
+version = "1.18"
+
+[package.metadata.system-deps.'cfg(target_os = "macos")'.gstreamer_1_0.v1_18_3]
+version = "1.18.3"
+
+[package.metadata.system-deps.'cfg(target_os = "macos")'.gstreamer_1_0.v1_20]
+version = "1.20"
+
+[package.metadata.system-deps.'cfg(target_os = "macos")'.gstreamer_1_0.v1_22]
+version = "1.22"
+
+[package.metadata.system-deps.'cfg(target_os = "macos")'.gstreamer_1_0.v1_20_4]
+version = "1.20.4"
+
+[package.metadata.system-deps.'cfg(target_os = "macos")'.gstreamer_1_0.v1_24]
+version = "1.24"
+
+[package.metadata.system-deps.'cfg(target_os = "macos")'.gstreamer_1_0.v1_26]
+version = "1.25"
