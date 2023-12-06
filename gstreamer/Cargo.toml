@@ -12,6 +12,7 @@ documentation = "https://gstreamer.pages.freedesktop.org/gstreamer-rs/stable/lat
 keywords = ["gstreamer", "multimedia", "audio", "video", "gnome"]
 edition = "2021"
 rust-version = "1.63"
+build = "build.rs"
 
 [dependencies]
 bitflags = "1.0"
@@ -39,6 +40,9 @@ serde_json = "1.0"
 futures-executor = "0.3.1"
 gir-format-check = "0.1"
 
+[build-dependencies]
+system-deps = "6"
+
 [features]
 default = []
 v1_16 = ["ffi/v1_16"]
@@ -50,3 +54,25 @@ serde = ["num-rational/serde", "dep:serde", "serde_bytes"]
 
 [package.metadata.docs.rs]
 features = ["dox"]
+
+[package.metadata.system-deps.gstreamer_1_0]
+name = "gstreamer-1.0"
+version = "1.14"
+
+[package.metadata.system-deps.gstreamer_1_0.v1_16]
+version = "1.16"
+
+[package.metadata.system-deps.gstreamer_1_0.v1_18]
+version = "1.18"
+
+[package.metadata.system-deps.gstreamer_1_0.v1_18_3]
+version = "1.18.3"
+
+[package.metadata.system-deps.gstreamer_1_0.v1_20]
+version = "1.20"
+
+[package.metadata.system-deps.gstreamer_1_0.v1_22]
+version = "1.21"
+
+[package.metadata.system-deps.gstreamer_1_0.v1_20_4]
+version = "1.20.4"
