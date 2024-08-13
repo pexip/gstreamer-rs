@@ -49,6 +49,13 @@ mod rtp_meta;
 #[cfg_attr(docsrs, doc(cfg(feature = "v1_16")))]
 pub use crate::rtp_meta::*;
 
+#[cfg(feature = "v1_16")]
+#[cfg_attr(docsrs, doc(cfg(feature = "v1_16")))]
+mod rtp_repairmeta;
+#[cfg(feature = "v1_16")]
+#[cfg_attr(docsrs, doc(cfg(feature = "v1_16")))]
+pub use crate::rtp_repairmeta::*;
+
 // Re-export all the traits in a prelude module, so that applications
 // can always "use gst_rtp::prelude::*" without getting conflicts
 pub mod prelude {
