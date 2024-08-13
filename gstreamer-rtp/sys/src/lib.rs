@@ -496,6 +496,25 @@ impl ::std::fmt::Debug for GstRTPSourceMeta {
     }
 }
 
+#[derive(Copy, Clone)]
+#[repr(C)]
+pub struct GstRTPRepairMeta {
+    pub meta: gst::GstMeta,
+    pub idx_red_packets: u16,
+    pub num_red_packets: u16,
+    pub ssrc: u32,
+    pub seqnums: *mut glib::GArray,
+}
+
+impl ::std::fmt::Debug for GstRTPRepairMeta {
+    fn fmt(&self, f: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
+        f.debug_struct(&format!("GstRTPRepairMeta @ {self:p}"))
+            .field("meta", &self.meta)
+            .field("ssrc", &self.ssrc)
+            .finish()
+    }
+}
+
 // Classes
 #[derive(Copy, Clone)]
 #[repr(C)]
@@ -1430,4 +1449,15 @@ extern "C" {
     #[cfg_attr(docsrs, doc(cfg(feature = "v1_16")))]
     pub fn gst_rtp_source_meta_api_get_type() -> GType;
 
+    pub fn gst_rtp_repair_meta_add(
+        buffer: *mut gst::GstBuffer,
+        idx_red_packets: u16,
+        num_red_packets: u16,
+        ssrc: u32,
+        seqnums: *const u16,
+        seqnum_count: c_uint,
+    ) -> *mut GstRTPRepairMeta;
+
+    pub fn gst_rtp_repair_meta_get(buffer: *mut gst::GstBuffer) -> *mut GstRTPRepairMeta;
+    pub fn gst_rtp_repair_meta_api_get_type() -> GType;
 }
