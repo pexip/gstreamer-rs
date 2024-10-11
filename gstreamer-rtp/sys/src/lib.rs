@@ -496,6 +496,8 @@ impl ::std::fmt::Debug for GstRTPSourceMeta {
 #[repr(C)]
 pub struct GstRTPRepairMeta {
     pub meta: gst::GstMeta,
+    pub idx_red_packets: u16,
+    pub num_red_packets: u16,
     pub ssrc: u32,
     pub seqnums: *mut glib::GArray
 }
@@ -1446,6 +1448,8 @@ extern "C" {
 
     pub fn gst_buffer_add_rtp_repair_meta(
         buffer: *mut gst::GstBuffer,
+        idx_red_packets: u16,
+        num_red_packets: u16,
         ssrc: u32,
         seqnums: *const u16,
         seqnum_count: c_uint

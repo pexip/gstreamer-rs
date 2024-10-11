@@ -20,6 +20,8 @@ impl RTPRepairMeta {
     #[doc(alias = "gst_buffer_add_rtp_repair_meta")]
     pub fn add<'a>(
         buffer: &'a mut gst::BufferRef,
+        idx: u16,
+        num_pkts: u16,
         ssrc: u32,
         seqnum: &[u16],
     ) -> gst::MetaRefMut<'a, Self, gst::meta::Standalone> {
@@ -27,6 +29,8 @@ impl RTPRepairMeta {
         unsafe {
             let meta = gst_buffer_add_rtp_repair_meta(
                 buffer.as_mut_ptr(),
+                idx,
+                num_pkts,
                 ssrc,
                 seqnum.as_ptr(),
                 seqnum.len() as u32,
@@ -45,6 +49,24 @@ impl RTPRepairMeta {
             let meta = gst_buffer_get_rtp_repair_meta(buffer.as_mut_ptr());
 
             Self::from_mut_ptr(buffer, meta)
+        }
+    }
+
+    #[inline]
+    pub fn idx(&self) -> Option::<u16> {
+        if self.0.seqnums != ptr::null_mut() {
+            Some(self.0.idx_red_packets)
+        } else {
+            None
+        }
+    }
+
+    #[inline]
+    pub fn num_red_pkts(&self) -> Option::<u16> {
+        if self.0.seqnums != ptr::null_mut() {
+            Some(self.0.num_red_packets)
+        } else {
+            None
         }
     }
 
