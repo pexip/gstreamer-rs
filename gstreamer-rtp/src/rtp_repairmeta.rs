@@ -38,9 +38,7 @@ impl RTPRepairMeta {
     }
 
     #[inline]
-    pub fn get<'a>(
-        buffer: &'a gst::BufferRef
-    ) -> Option::<gst::MetaRef<'a, Self>> {
+    pub fn get<'a>(buffer: &'a gst::BufferRef) -> Option<gst::MetaRef<'a, Self>> {
         skip_assert_initialized!();
         unsafe {
             let meta = ffi::gst_rtp_repair_meta_get(buffer.as_mut_ptr());
@@ -52,7 +50,7 @@ impl RTPRepairMeta {
     }
 
     #[inline]
-    pub fn idx(&self) -> Option::<u16> {
+    pub fn idx(&self) -> Option<u16> {
         if self.0.seqnums != ptr::null_mut() {
             Some(self.0.idx_red_packets)
         } else {
@@ -61,7 +59,7 @@ impl RTPRepairMeta {
     }
 
     #[inline]
-    pub fn num_red_pkts(&self) -> Option::<u16> {
+    pub fn num_red_pkts(&self) -> Option<u16> {
         if self.0.seqnums != ptr::null_mut() {
             Some(self.0.num_red_packets)
         } else {
@@ -70,7 +68,7 @@ impl RTPRepairMeta {
     }
 
     #[inline]
-    pub fn ssrc(&mut self) -> Option::<u32> {
+    pub fn ssrc(&mut self) -> Option<u32> {
         if self.0.seqnums != ptr::null_mut() {
             Some(self.0.ssrc)
         } else {
@@ -79,7 +77,7 @@ impl RTPRepairMeta {
     }
 
     #[inline]
-    pub fn repair_seqnum(&self) -> Option::<&[u16]> {
+    pub fn repair_seqnum(&self) -> Option<&[u16]> {
         unsafe {
             if self.0.seqnums != ptr::null_mut() {
                 Some(std::slice::from_raw_parts(
@@ -102,4 +100,3 @@ unsafe impl MetaAPI for RTPRepairMeta {
         unsafe { from_glib(ffi::gst_rtp_repair_meta_api_get_type()) }
     }
 }
-

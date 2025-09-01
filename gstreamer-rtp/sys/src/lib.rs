@@ -503,7 +503,7 @@ pub struct GstRTPRepairMeta {
     pub idx_red_packets: u16,
     pub num_red_packets: u16,
     pub ssrc: u32,
-    pub seqnums: *mut glib::GArray
+    pub seqnums: *mut glib::GArray,
 }
 
 impl ::std::fmt::Debug for GstRTPRepairMeta {
@@ -1455,11 +1455,9 @@ extern "C" {
         num_red_packets: u16,
         ssrc: u32,
         seqnums: *const u16,
-        seqnum_count: c_uint
+        seqnum_count: c_uint,
     ) -> *mut GstRTPRepairMeta;
-    
-    pub fn gst_rtp_repair_meta_get(
-        buffer: *mut gst::GstBuffer
-    ) -> *mut GstRTPRepairMeta;
+
+    pub fn gst_rtp_repair_meta_get(buffer: *mut gst::GstBuffer) -> *mut GstRTPRepairMeta;
     pub fn gst_rtp_repair_meta_api_get_type() -> GType;
 }
