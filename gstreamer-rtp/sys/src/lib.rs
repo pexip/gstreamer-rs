@@ -504,6 +504,7 @@ pub struct GstRTPRepairMeta {
     pub num_red_packets: u16,
     pub ssrc: u32,
     pub seqnums: *mut glib::GArray,
+    pub timestamps: *mut glib::GArray,
 }
 
 impl ::std::fmt::Debug for GstRTPRepairMeta {
@@ -1455,6 +1456,7 @@ extern "C" {
         num_red_packets: u16,
         ssrc: u32,
         seqnums: *const u16,
+        timestamps: *const u32,
         seqnum_count: c_uint,
     ) -> *mut GstRTPRepairMeta;
 
