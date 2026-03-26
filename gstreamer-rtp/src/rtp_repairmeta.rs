@@ -21,8 +21,10 @@ impl RTPRepairMeta {
         num_pkts: u16,
         ssrc: u32,
         seqnum: &[u16],
+        timestamps: &[u32],
     ) -> gst::MetaRefMut<'a, Self, gst::meta::Standalone> {
         skip_assert_initialized!();
+        assert_eq!(seqnum.len(), timestamps.len());
         unsafe {
             let meta = ffi::gst_rtp_repair_meta_add(
                 buffer.as_mut_ptr(),
@@ -30,6 +32,7 @@ impl RTPRepairMeta {
                 num_pkts,
                 ssrc,
                 seqnum.as_ptr(),
+                timestamps.as_ptr(),
                 seqnum.len() as u32,
             );
 
@@ -51,7 +54,7 @@ impl RTPRepairMeta {
 
     #[inline]
     pub fn idx(&self) -> Option<u16> {
-        if self.0.seqnums != ptr::null_mut() {
+        if !self.0.seqnums.is_null() {
             Some(self.0.idx_red_packets)
         } else {
             None
@@ -60,7 +63,7 @@ impl RTPRepairMeta {
 
     #[inline]
     pub fn num_red_pkts(&self) -> Option<u16> {
-        if self.0.seqnums != ptr::null_mut() {
+        if !self.0.seqnums.is_null() {
             Some(self.0.num_red_packets)
         } else {
             None
@@ -69,7 +72,7 @@ impl RTPRepairMeta {
 
     #[inline]
     pub fn ssrc(&mut self) -> Option<u32> {
-        if self.0.seqnums != ptr::null_mut() {
+        if !self.0.seqnums.is_null() {
             Some(self.0.ssrc)
         } else {
             None
@@ -79,10 +82,24 @@ impl RTPRepairMeta {
     #[inline]
     pub fn repair_seqnum(&self) -> Option<&[u16]> {
         unsafe {
-            if self.0.seqnums != ptr::null_mut() {
+            if !self.0.seqnums.is_null() {
                 Some(std::slice::from_raw_parts(
                     (*self.0.seqnums).data as *const u16,
                     (*self.0.seqnums).len as usize,
+                ))
+            } else {
+                None
+            }
+        }
+    }
+
+    #[inline]
+    pub fn repair_timestamps(&self) -> Option<&[u32]> {
+        unsafe {
+            if !self.0.timestamps.is_null() {
+                Some(std::slice::from_raw_parts(
+                    (*self.0.timestamps).data as *const u32,
+                    (*self.0.timestamps).len as usize,
                 ))
             } else {
                 None
